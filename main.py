@@ -179,12 +179,14 @@ def main():
         console.print(f"Found [bold]{total_verbs}[/bold] unique verbs")
         console.print(f"Organized into [bold]{len(days_of_verbs)}[/bold] study days")
         
-        # Show preview of first day
-        if days_of_verbs:
-            preview = ", ".join(days_of_verbs[0][:5])
-            if len(days_of_verbs[0]) > 5:
-                preview += "..."
-            console.print(f"\n[dim]Day 1 preview: {preview}[/dim]")
+        # Show frequency table of top 10 verbs
+        table = Table(title="Top 10 Verbs by Frequency")
+        table.add_column("Verb", style="cyan", no_wrap=True)
+        table.add_column("Frequency", style="magenta")
+        top_verbs = sorted(verb_frequency.items(), key=lambda x: x[1], reverse=True)[:10]
+        for verb, freq in top_verbs:
+            table.add_row(verb, str(freq))
+        console.print(table)
         
         # Ask if user wants to proceed
         proceed = console.input("\n[bold]Proceed with conjugation study?[/bold] (y/n): ")

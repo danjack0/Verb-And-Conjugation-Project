@@ -5,7 +5,7 @@ A Python NLP tool that analyzes Italian text files to extract verbs, rank by fre
 ## Motivation
 Built this to solve a personal problem: I wanted to learn Italian verbs from authentic texts, but manually extracting and organizing them was tedious. This tool automates the entire workflow.
 
-## ✨ Features
+## Features
 - **Automatic verb extraction** using spaCy NLP and lemmatization
 - **Frequency-based ranking** - study the most common verbs first
 - **Smart categorization** - separates -are, -ere, -ire, and irregular verbs

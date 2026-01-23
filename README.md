@@ -64,5 +64,3 @@ The program will:
 - [ ] Support for Spanish, French, Portuguese
 - [ ] Spaced repetition algorithm
 
-## License
-MIT License - feel free to use and modify!

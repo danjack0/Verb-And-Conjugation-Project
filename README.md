@@ -3,7 +3,7 @@
 A Python NLP tool that analyzes Italian text files to extract verbs, rank by frequency, and generate optimized study schedules.
 
 ## Motivation
-Built this to solve a personal problem: I wanted to learn Italian verbs from authentic texts, but manually extracting and organizing them was tedious. This tool automates the entire workflow.
+Built this to solve a personal problem: I wanted a tool to extract verbs and make study sets for language learning, but did not know of such. So I made my own.
 
 ## Features
 - **Automatic verb extraction** using spaCy NLP and lemmatization
@@ -54,13 +54,10 @@ The program will:
 - **mlconjug3** - Italian verb conjugation engine
 - **Rich** - Terminal formatting and tables
 
-## Screenshots
-*Coming soon - terminal output examples*
-
 ## Future Enhancements
 - [ ] Export to Anki flashcard format
-- [ ] Progress tracking with SQLite database
-- [ ] Web interface using Streamlit
+- [ ] Progress tracking with database
+- [ ] Web interface
 - [ ] Support for Spanish, French, Portuguese
 - [ ] Spaced repetition algorithm
 

@@ -1,3 +1,4 @@
+import mlconjug3
 from mlconjug3 import Conjugator
 import spacy
 import sys
@@ -63,6 +64,12 @@ def extract_and_group_verbs(text):
         if token.pos_ in ("VERB", "AUX"):
             lemma = token.lemma_.lower()
             
+            # Skip unwanted lemmas //ex. clitics, single-letter tokens, non-alpha
+            if (lemma in {'il', 'lo', 'la', 'i', 'gli', 'le', 'mi', 'ti', 'ci', 'vi', 'si', 'ne'}
+            and lemma.isalpha() is False
+            and len(lemma) < 2):
+                continue
+
             if lemma not in seen:
                 # Store frequency
                 lemma_id = doc.vocab[lemma].orth

@@ -54,6 +54,18 @@ The program will:
 - **mlconjug3** - Italian verb conjugation engine
 - **Rich** - Terminal formatting and tables
 
+## Architecture Overview
+
+The application is designed with a modular architecture to improve readability, maintainability, and extensibility:
+
+- **Text Ingestion Layer** – Handles file input and preprocessing
+- **NLP Processing Layer** – Uses spaCy for lemmatization and part-of-speech tagging
+- **Verb Analysis Engine** – Ranks verbs by frequency and categorizes regular vs irregular forms
+- **Study Plan Generator** – Distributes verbs across optimized daily study sets
+- **CLI Presentation Layer** – Displays tables and conjugations using Rich
+
+This separation of concerns enables future expansion (e.g., web interface, additional languages) without major refactoring.
+
 ## Future Enhancements
 - [ ] Export to Anki flashcard format
 - [ ] Progress tracking with database

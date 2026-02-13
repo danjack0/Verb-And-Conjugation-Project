@@ -54,6 +54,7 @@ Tests focus on ensuring correctness of verb extraction, frequency analysis, and 
 ### Run Tests
 ```bash
 python -m pytest
+```
 
 ## Architecture Overview
 
@@ -80,4 +81,3 @@ This separation of concerns enables future expansion (e.g., web interface, addit
 - [ ] Web interface
 - [ ] Support for Spanish, French, Portuguese
 - [ ] Spaced repetition algorithm
-

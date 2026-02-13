@@ -41,18 +41,19 @@ python main.py your_text.txt
 # Or run with default sample text
 python main.py
 ```
-
 The program will:
 1. Analyze the text and extract all verbs
 2. Show a frequency table of top verbs
 3. Prompt you to select which tenses to study
 4. Display conjugations organized by study day
 
-## Tech Stack
-- **Python 3.x**
-- **spaCy** - Natural language processing and part-of-speech tagging
-- **mlconjug3** - Italian verb conjugation engine
-- **Rich** - Terminal formatting and tables
+## Testing
+Core application logic is validated using unit tests written with **pytest**.  
+Tests focus on ensuring correctness of verb extraction, frequency analysis, and study plan generation.
+
+### Run Tests
+```bash
+python -m pytest
 
 ## Architecture Overview
 
@@ -65,6 +66,13 @@ The application is designed with a modular architecture to improve readability, 
 - **CLI Presentation Layer** – Displays tables and conjugations using Rich
 
 This separation of concerns enables future expansion (e.g., web interface, additional languages) without major refactoring.
+
+## Tech Stack
+- **Python 3.x**
+- **spaCy** – Natural language processing and part-of-speech tagging
+- **mlconjug3** – Italian verb conjugation engine
+- **Rich** – Terminal formatting and tables
+- **pytest** – Unit testing framework
 
 ## Future Enhancements
 - [ ] Export to Anki flashcard format
